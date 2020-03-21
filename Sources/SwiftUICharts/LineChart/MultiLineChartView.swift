@@ -15,6 +15,8 @@ public struct MultiLineChartView: View {
     public var style: ChartStyle
     public var darkModeStyle: ChartStyle
     public var formSize:CGSize
+    @State
+    public var frame = CGSize(width: 180, height: 120)
     public var dropShadow: Bool
     public var valueSpecifier:String
     
@@ -42,8 +44,6 @@ public struct MultiLineChartView: View {
         }
         return 0
     }
-    
-    let frame = CGSize(width: 180, height: 120)
     private var rateValue: Int
     
     public init(data: [([Double], GradientColor)],
